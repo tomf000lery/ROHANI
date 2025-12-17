@@ -21,26 +21,21 @@ body {
   transition: transform 0.5s;
 }
 
-.logo-area h1 {
-  font-size: 2.5rem;
-  letter-spacing: 2px;
-}
-
 /* TAGLINE */
 .tagline {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
   margin: 0;
   height: 80vh;
-  flex-wrap: wrap;
+  white-space: nowrap; /* prevent stacking */
 }
 
 .tagline span.fade {
   opacity: 0;
   animation: fadeIn 1.5s forwards;
-  font-size: clamp(2rem, 10vw, 8rem); /* fits middle and adjusts */
+  font-size: clamp(2rem, 8vw, 6rem); /* responsive */
 }
 
 .tagline span.fade:nth-child(1) { animation-delay: 0.3s; }
@@ -113,8 +108,8 @@ body {
 }
 
 .partner {
-  width: 100%;
-  padding-top: 100%; /* square */
+  width: 60%;        /* smaller squares */
+  padding-top: 60%;  /* maintain square ratio */
   background: #f0f0f0;
   position: relative;
 }
@@ -132,7 +127,6 @@ body {
   background: #fff;
   color: #111;
   padding: 3rem 2rem;
-  text-align: center;
 }
 
 .newsletter {
@@ -140,7 +134,7 @@ body {
   flex-direction: column;
   gap: 0.5rem;
   max-width: 300px;
-  margin: 0 auto;
+  margin: 0 auto; /* centered */
 }
 
 .newsletter input,
@@ -164,8 +158,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
-  max-width: 300px;
-  margin: 0 auto;
 }
 
 /* ANIMATIONS */
