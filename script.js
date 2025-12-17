@@ -4,9 +4,15 @@ document.querySelector(".newsletter").addEventListener("submit", function(e) {
   alert("Thank you for signing up!");
 });
 
-// Smooth scroll away top bar
+// Top bar slides up after tagline scroll
+const hero = document.getElementById("hero");
+const tagline = document.getElementById("tagline");
+
 window.addEventListener("scroll", () => {
-  const hero = document.getElementById("hero");
-  const scrollY = window.scrollY;
-  hero.style.transform = `translateY(-${scrollY * 0.5}px)`; // slides up smoothly
+  const taglineBottom = tagline.getBoundingClientRect().bottom;
+  if(taglineBottom < 0) {
+    hero.style.transform = "translateY(-100%)";
+  } else {
+    hero.style.transform = "translateY(0)";
+  }
 });
