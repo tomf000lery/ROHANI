@@ -26,7 +26,7 @@ body {
   letter-spacing: 2px;
 }
 
-/* TAGLINE HUGE AND RESPONSIVE */
+/* TAGLINE */
 .tagline {
   display: flex;
   justify-content: center;
@@ -34,12 +34,13 @@ body {
   gap: 1rem;
   margin: 0;
   height: 80vh;
+  flex-wrap: wrap;
 }
 
 .tagline span.fade {
   opacity: 0;
   animation: fadeIn 1.5s forwards;
-  font-size: clamp(2rem, 12vw, 10rem); /* responsive size */
+  font-size: clamp(2rem, 10vw, 8rem); /* fits middle and adjusts */
 }
 
 .tagline span.fade:nth-child(1) { animation-delay: 0.3s; }
@@ -94,24 +95,27 @@ body {
   max-width: 900px;
   margin: 4rem auto;
   padding: 0 2rem;
+  text-align: center;
 }
 
 .partners-title {
   font-size: 1.5rem;
   margin-bottom: 2rem;
-  text-align: left;
 }
 
 .partner-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   gap: 1rem;
+  justify-items: center;
+  align-items: center;
 }
 
 .partner {
-  background: #f0f0f0;
   width: 100%;
-  padding-top: 100%; /* makes it a perfect square */
+  padding-top: 100%; /* square */
+  background: #f0f0f0;
   position: relative;
 }
 
@@ -128,6 +132,7 @@ body {
   background: #fff;
   color: #111;
   padding: 3rem 2rem;
+  text-align: center;
 }
 
 .newsletter {
@@ -135,6 +140,7 @@ body {
   flex-direction: column;
   gap: 0.5rem;
   max-width: 300px;
+  margin: 0 auto;
 }
 
 .newsletter input,
@@ -155,7 +161,11 @@ body {
 
 .footer-contact {
   text-align: left;
-  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  max-width: 300px;
+  margin: 0 auto;
 }
 
 /* ANIMATIONS */
