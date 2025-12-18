@@ -19,17 +19,24 @@ body {
   top: 0;
   z-index: 1000;
   transition: transform 0.5s;
+
+  /* NEW: add space below hero */
+  margin-bottom: 2rem; /* adjust value as needed */
 }
 
+
 /* TAGLINE */
+
 /* Container matches description text width */
 .tagline-container {
-  max-width: 800px;       /* same as .about */
+  max-width: 800px;  
   width: 100%;
-  margin: 0 auto;         /* centered */
-  padding: 0 1rem;        /* small breathing room, removes cropping */
+  margin: 0 auto;
+  padding: 0 1rem; /* small breathing room */
   box-sizing: border-box;
+  overflow: visible;
 }
+
 
 /* Tagline */
 .tagline {
@@ -58,11 +65,20 @@ body {
 
 /* Diamonds between words */
 .diamond {
-  width: 0.8em;
-  height: 0.8em;
-  background: #111;
+  width: 1em;
+  height: 1em;
+  background: #111;      /* or change to a contrasting color, e.g., #fff */
   transform: rotate(45deg);
+  display: inline-block;
 }
+
+@media (min-width: 768px) {
+  .diamond {
+    width: 1.2em;
+    height: 1.2em;
+  }
+}
+
 
 /* Fade-in keyframes */
 @keyframes fadeIn {
