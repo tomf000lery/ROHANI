@@ -30,3 +30,11 @@ function fitTagline() {
 
 window.addEventListener('load', fitTagline);
 window.addEventListener('resize', fitTagline);
+
+window.addEventListener('scroll', () => {
+  const tagline = document.querySelector('.tagline');
+  const scrollY = window.scrollY;
+
+  const scale = Math.max(0.85, 1 - scrollY / 1200);
+  tagline.style.transform = `scale(${scale})`;
+});
