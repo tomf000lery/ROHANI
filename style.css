@@ -26,33 +26,43 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
 
-  gap: 1.5vw;
-  padding: 0 2vw;
+  height: 80vh;
+  padding: 0 6vw;               /* negative space left & right */
+  gap: 2vw;
 
   white-space: nowrap;
   overflow: hidden;
+
+  font-size: clamp(2rem, 7vw, 7rem);
 }
 
 .tag-item {
-  font-size: clamp(1.5rem, 6vw, 6rem);
   opacity: 0;
   animation: fadeIn 1.6s ease forwards;
 }
 
-.tag-item:nth-child(1) { animation-delay: 0.2s; }
-.tag-item:nth-child(2) { animation-delay: 0.2s; }
-.tag-item:nth-child(3) { animation-delay: 0.5s; }
-.tag-item:nth-child(4) { animation-delay: 0.5s; }
-.tag-item:nth-child(5) { animation-delay: 0.8s; }
+.tag-item:nth-child(1),
+.tag-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.tag-item:nth-child(3),
+.tag-item:nth-child(4) {
+  animation-delay: 0.5s;
+}
+
+.tag-item:nth-child(5) {
+  animation-delay: 0.8s;
+}
 
 .diamond {
-  width: clamp(6px, 1vw, 12px);
-  height: clamp(6px, 1vw, 12px);
+  width: 0.8em;
+  height: 0.8em;
   background: #111;
   transform: rotate(45deg);
 }
+
 
 
 /* ABOUT */
