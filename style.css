@@ -27,20 +27,22 @@ body {
   justify-content: center;
   align-items: center;
 
-  height: 80vh;
+  /* Match the width of the about section */
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
 
-  padding: 0 10vw; /* white space on sides */
-  gap: 2vw;
+  /* Spacing between words */
+  gap: 1rem;
 
+  /* Prevent stacking */
   white-space: nowrap;
   overflow: hidden;
 
-  /* Big, responsive font size roughly 60% of screen width */
-  font-size: clamp(4rem, 8vw, 12rem);
+  /* Font scales to container width */
+  font-size: calc(2rem + 2vw);
 
-  max-width: 60vw; /* tagline container width */
-  margin: 0 auto;
-
+  /* Optional scroll scale effect */
   transition: transform 0.2s ease-out;
 }
 
