@@ -23,19 +23,21 @@ body {
 
 /* TAGLINE */
 .tagline {
+  transition: transform 0.2s ease-out;
   display: flex;
   justify-content: center;
   align-items: center;
 
   height: 80vh;
-  padding: 0 6vw;               /* negative space left & right */
+  padding: 0 6vw;
   gap: 2vw;
 
   white-space: nowrap;
   overflow: hidden;
 
-  font-size: clamp(2rem, 7vw, 7rem);
+  letter-spacing: clamp(-0.02em, -0.5vw, 0.02em);
 }
+
 
 .tag-item {
   opacity: 0;
@@ -43,18 +45,12 @@ body {
 }
 
 .tag-item:nth-child(1),
-.tag-item:nth-child(2) {
-  animation-delay: 0.2s;
-}
+.tag-item:nth-child(2) { animation-delay: 0.2s; }
 
 .tag-item:nth-child(3),
-.tag-item:nth-child(4) {
-  animation-delay: 0.5s;
-}
+.tag-item:nth-child(4) { animation-delay: 0.5s; }
 
-.tag-item:nth-child(5) {
-  animation-delay: 0.8s;
-}
+.tag-item:nth-child(5) { animation-delay: 0.8s; }
 
 .diamond {
   width: 0.8em;
@@ -62,6 +58,7 @@ body {
   background: #111;
   transform: rotate(45deg);
 }
+
 
 
 
