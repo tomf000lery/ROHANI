@@ -16,3 +16,17 @@ window.addEventListener("scroll", () => {
     hero.style.transform = "translateY(0)";
   }
 });
+
+function fitTagline() {
+  const tagline = document.querySelector('.tagline');
+  const containerWidth = window.innerWidth * 0.88; // leave side breathing room
+
+  tagline.style.fontSize = '10px'; // reset
+  const textWidth = tagline.scrollWidth;
+
+  const scale = containerWidth / textWidth;
+  tagline.style.fontSize = `${10 * scale}px`;
+}
+
+window.addEventListener('load', fitTagline);
+window.addEventListener('resize', fitTagline);
