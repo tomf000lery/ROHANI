@@ -17,24 +17,10 @@ window.addEventListener("scroll", () => {
   }
 });
 
-function fitTagline() {
-  const tagline = document.querySelector('.tagline');
-  const containerWidth = window.innerWidth * 0.88; // leave side breathing room
-
-  tagline.style.fontSize = '10px'; // reset
-  const textWidth = tagline.scrollWidth;
-
-  const scale = containerWidth / textWidth;
-  tagline.style.fontSize = `${10 * scale}px`;
-}
-
-window.addEventListener('load', fitTagline);
-window.addEventListener('resize', fitTagline);
-
+// Scroll-based tagline scale (cinematic effect)
 window.addEventListener('scroll', () => {
-  const tagline = document.querySelector('.tagline');
   const scrollY = window.scrollY;
-
   const scale = Math.max(0.85, 1 - scrollY / 1200);
   tagline.style.transform = `scale(${scale})`;
 });
+
