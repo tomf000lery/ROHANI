@@ -105,20 +105,21 @@ body {
 }
 
 .partner-grid {
+  width: min(60vw, 420px);
+  aspect-ratio: 1 / 1;
+
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  gap: 1rem;
-  justify-items: center;
-  align-items: center;
+
+  margin: 0 auto;
 }
 
 .partner {
-  width: 60%;        /* smaller squares */
-  padding-top: 60%;  /* maintain square ratio */
   background: #f0f0f0;
-  position: relative;
+  aspect-ratio: 1 / 1;
 }
+
 
 .partner::after {
   content: attr(data-name);
