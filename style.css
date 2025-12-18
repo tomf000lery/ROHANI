@@ -26,28 +26,34 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
-  margin: 0;
   height: 80vh;
-  white-space: nowrap; /* prevent stacking */
+
+  gap: 1.5vw;
+  padding: 0 2vw;
+
+  white-space: nowrap;
+  overflow: hidden;
 }
 
-.tagline span.fade {
+.tag-item {
+  font-size: clamp(1.5rem, 6vw, 6rem);
   opacity: 0;
-  animation: fadeIn 1.5s forwards;
-  font-size: clamp(2rem, 8vw, 6rem); /* responsive */
+  animation: fadeIn 1.6s ease forwards;
 }
 
-.tagline span.fade:nth-child(1) { animation-delay: 0.3s; }
-.tagline span.fade:nth-child(3) { animation-delay: 0.6s; }
-.tagline span.fade:nth-child(5) { animation-delay: 0.9s; }
+.tag-item:nth-child(1) { animation-delay: 0.2s; }
+.tag-item:nth-child(2) { animation-delay: 0.2s; }
+.tag-item:nth-child(3) { animation-delay: 0.5s; }
+.tag-item:nth-child(4) { animation-delay: 0.5s; }
+.tag-item:nth-child(5) { animation-delay: 0.8s; }
 
 .diamond {
-  width: 10px;
-  height: 10px;
+  width: clamp(6px, 1vw, 12px);
+  height: clamp(6px, 1vw, 12px);
   background: #111;
   transform: rotate(45deg);
 }
+
 
 /* ABOUT */
 .about {
