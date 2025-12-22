@@ -31,7 +31,7 @@ body {
 .tagline-container {
   max-width: 800px;  
   width: 100%;
-  margin: 4rem auto 0;
+  margin: 8rem auto 0;
   padding: 0 1rem; /* small breathing room */
   box-sizing: border-box;
   overflow: visible;
@@ -89,7 +89,7 @@ body {
 /* ABOUT */
 .about {
   max-width: 800px;
-  margin: 3rem auto;
+  margin: 8rem auto;
   padding: 0 2rem;
   text-align: left;
 }
